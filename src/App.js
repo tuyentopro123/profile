@@ -10,16 +10,18 @@ import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import Space from './components/Space/Space'
 import Aside from './components/Aside/Aside'
-
+import space from './assets/space.gif'
+import space2 from './assets/space2.gif'
 
 
 
 function App() {
   const [openHeader,setOpenHeader] = useState('')
   const [closeHeader,setCloseHeader] = useState('active')
+  const [navBar,setNavBar] = useState(false)
 
   window.addEventListener('scroll',() => {
-    if(window.pageYOffset > 300) {
+    if(window.pageYOffset > 200) {
         setOpenHeader('')
         setCloseHeader('active')
     } else {
@@ -29,14 +31,15 @@ function App() {
 })
   return (
     <div className="App">
-      <Header openHeader= {openHeader} closeHeader= {closeHeader} />
+      <Header navBar = {navBar} setNavBar= {setNavBar} openHeader= {openHeader} closeHeader= {closeHeader} />
       <Header_column openHeader= {openHeader} closeHeader= {closeHeader} />
-      <Aside/>
+      <Aside navBar = {navBar} setNavBar= {setNavBar}/>
       <main>
         <Home/>
         <About/>
-        <Space/>
+        <Space text={'Are you wanna work with me'} background={space}/>
         <Education/>
+        <Space text={'some of my debut products'} background={space2}/>
         <Product/>
         <Contact/>
       </main>

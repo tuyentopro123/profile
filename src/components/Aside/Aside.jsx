@@ -2,15 +2,15 @@ import React from 'react'
 import logo from '../../assets/logo.svg'
 
 
-const Aside = () => {
+const Aside = ({navBar,setNavBar}) => {
     return (
         <aside className="aside">
-            <div className="aside__overlay"></div>
-            <div className="aside__navbar">
+            <div className={`aside__overlay ${navBar ? 'active' : ''}`} onClick={() => setNavBar(!navBar)}></div>
+            <div className={`aside__navbar ${navBar ? 'active' : ''}`}>
                 <div className="aside__logo">
                     <img src={logo}/>
                 </div>
-                <div className="aside__menu">
+                <div className="aside__menu" onClick={() => setNavBar(!navBar)}>
                     <ul>
                         <li><a className="aside__menu__link" href="#home">Home</a></li>
                         <li><a className="aside__menu__link" href="#about">About</a></li>

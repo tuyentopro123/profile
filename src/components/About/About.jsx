@@ -8,12 +8,12 @@ import {UpCircleOutlined} from "@ant-design/icons"
 const skills = [
     {
         name:'HTML5/CSS3',
-        percents:'80%',
+        percents:'75%',
         color:'#5ea3ec'
     },
     {
         name:'ReactJS',
-        percents:'50%',
+        percents:'30%',
         color:'#f64444'
     },    {
         name:'Javascript',
@@ -25,17 +25,17 @@ const skills = [
 const skills_2 = [
     {
         name:'Adobe Photoshop',
-        percents:'100%',
+        percents:'40%',
         color:'#5ea3ec'
     },
     {
-        name:'',
-        percents:'100%',
+        name:'Adobe Illustrator',
+        percents:'50%',
         color:'#f64444'
     },    
     {
-        name:'',
-        percents:'100%',
+        name:'Adobe Fireworks',
+        percents:'0%',
         color:'#ffb400'
     },
 ]
@@ -76,7 +76,12 @@ const About = () => {
                 <div className="about__description__text">
                     <div>
                         <h1>Let me introduce myself</h1>
-                        I’m Mai Linh. I’m 28 years old and I’m single. I was born and grew up in Ha Noi, but I have been working in HCM City for 5 years. I graduated from the University of Economics and got 4 years of experience in Administration and Human Resource Management. I’m an active person who enjoy  working in the fields related to human beings. I’m rather serious and sensitive, so I can quickly catch up with the psychology of other people. I often read newspapers and listen to music in my free time.
+                        <span>
+                        A young development engineer, eager to learn and strive for self-development.
+                        </span>
+                        <p>
+                         I am in the process of self-studying and learning about front end with tools like HTML,CSS,JS,ReactJS,FireBase,...
+                        </p>
                     </div>
                     <button className="about__description__button" onClick={handleUP}>
                     <span>My infomation</span>
@@ -86,10 +91,10 @@ const About = () => {
                 <div className="about__description__skills">
                         <h4>Skills</h4>
                         <div>
-                            <h3>Professional Skills</h3>
-                            {skills.map((e) => (
+                            <h3>Code Skills</h3>
+                            {skills.map((e,i) => (
                             
-                                <div className="about__description__skills__progess">
+                                <div key={i} className="about__description__skills__progess">
                                 <div className="about__description__skills__progessbar" style={{width: `${e.percents}`}}>
                                     <div className={`about__description__skills__progesser`} style={{backgroundColor: `${e.color}`}}>
                                         <p>{e.name}</p>
@@ -101,9 +106,9 @@ const About = () => {
                         </div>
 
                         <div>
-                            <h3>Professional Skills</h3>
-                            {skills_2.map((e) => (
-                                <div className="about__description__skills__progess">
+                            <h3>Software Skills</h3>
+                            {skills_2.map((e,i) => (
+                                <div key={i} className="about__description__skills__progess">
                                 <div className="about__description__skills__progessbar" style={{width: `${e.percents}`}}>
                                     <div className="about__description__skills__progesser"  style={{backgroundColor: `${e.color}`}}>
                                         <p>{e.name}</p>

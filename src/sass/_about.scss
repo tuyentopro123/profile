@@ -40,12 +40,23 @@
             padding: 0 12px;
             font-size: 14px;
             width:40%;
-            color: #666;
             @include mobile() {
                 width: 100%;
             }
             h1 {
-                margin: 12px 0;
+                margin: 20px 0;
+                color: #f60;
+                font-size: 35px;
+            }
+            span {
+                line-height: 30px;
+                font-size: 22px;
+                font-weight: 600;
+            }
+            p {
+                line-height: 22px;
+                margin: 24px 0px;
+                color: #4b4b4b;
             }
             @include tablet() {
                 margin-top: 30px;
@@ -59,12 +70,15 @@
         }
 
         &__button {
-            margin: 14px 0;
+            margin: 22px 0;
             span{
-                background-color: #81d5fa;
-                color: #924dd3;
-                font-size: 20px;
-                border-bottom: 2px solid;
+                background-color: #2912ff;
+                color: #cfe8f3;
+                font-size: 17px;
+                border-radius: 8px;
+                cursor: pointer;
+                padding: 9px;
+                /* border-bottom: 2px solid; */
                 transition: all 0.3s;
             }
         }
@@ -72,6 +86,9 @@
         &__button:hover {
             span{
                 letter-spacing:2px;
+                background-color: #83f183;
+                color: #161414bd;
+
             }
         }
 
@@ -96,6 +113,7 @@
 
             &__progess {
                 position: relative;
+                overflow: hidden;
                 @include flex(center,space-between);
                 line-height: 30px;
                 width: 75%;

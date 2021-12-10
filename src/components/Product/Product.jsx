@@ -14,33 +14,33 @@ const products = [
         name: 'Chat App',
         href:   'https://tealiveapp.firebaseapp.com/login',
         Img : chatApp,
-        p:'Sanr phaarm ddaauf tieenf suwr dungj react js',
-        span: ['HTML','ReactJS','CSS']
+        p:'first product with firebase',
+        span: ['HTML','ReactJS','CSS','Firebase']
     },
     {   
-        name: 'Chat App',
+        name: 'Countdown Timer',
         href:   'https://tuyentopro123.github.io/Countdown-timer-main/',
         Img : count,
-        p:'Sanr phaarm ddaauf tieenf suwr dungj react js',
-        span: ['HTML']
+        p:'Countdown Timer, challenge by frontend mentor',
+        span: ['HTML','JS','CSS']
     },{   
-        name: 'Chat App',
+        name: 'Resto',
         href:   'https://tuyentopro123.github.io/Food_web/',
         Img : resto,
-        p:'Sanr phaarm ddaauf tieenf suwr dungj react js',
-        span: ['HTML']
+        p:'The first product I learned responsive on mobile,tablet',
+        span: ['HTML','CSS','JS','Responsive']
     },{   
-        name: 'Chat App',
+        name: 'Calculator',
         href:   'https://tuyentopro123.github.io/Calculator_app/',
         Img : calculator,
-        p:'Sanr phaarm ddaauf tieenf suwr dungj react jsphaarm ddaauf tieenf suwr dungj react jsphaarm ddaauf tieenf suwr dungj react jsphaarm ddaauf tieenf suwr dungj react jsphaarm ddaauf tieenf suwr dungj react jsphaarm ddaauf tieenf suwr dungj react jsphaarm ddaauf tieenf suwr dungj react jsphaarm ddaauf tieenf suwr dungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react jsdungj react js',
-        span: ['HTML']
+        p:'first project using React JS',
+        span: ['HTML','CSS','ReactJS']
     },{   
-        name: 'Chat App',
+        name: 'Music player',
         href:   'https://tuyentopro123.github.io/music_sesson2/',
         Img : music,
-        p:'Sanr phaarm ddaauf tieenf suwr dungj react js',
-        span: ['HTML']
+        p:'first project using Javascript',
+        span: ['HTML','CSS','JS']
     },
 ]
 
@@ -71,17 +71,17 @@ const Product = () => {
                     }}
                 >
                     {products.map((product,i) => (
-                    <a data-aos="zoom-in" key={i}  href={product.href} style={{backgroundImage: `url(${product.Img})`}} target="_blank" className={`product__item`}>
-                        <div className="product__item__descreption">
-                            <h1>{product.name}</h1>
-                            <p>{product.p}</p>
-                            <div>
-                                {product.span.map((e) => (
-                                    <h4>{e}</h4>
-                                ))}
+                        <a data-aos="zoom-in" key={i}  href={product.href} style={{backgroundImage: `url(${product.Img})`}} target="_blank" className={`product__item`}>
+                            <div className="product__item__descreption">
+                                <h1>{product.name}</h1>
+                                <p>{product.p}</p>
+                                <div>
+                                    {product.span.map((e) => (
+                                        <h4>{e}</h4>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                 ))}   
                 </Slider>
             </div>

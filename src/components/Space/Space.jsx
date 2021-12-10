@@ -1,13 +1,12 @@
 import React from 'react'
-import space from '../../assets/space.gif'
 
-const Space = () => {
+const Space = ({text,background}) => {
     return (
         <div>
-            <section className="space" style={{backgroundImage: `url(${space})`}}>
+            <section className="space" style={{backgroundImage: `url(${background})`}}>
                 <div className="space__text container">
                     <div className="row">
-                        <h2>Are you wanna work with me</h2>
+                        <h2>{text}</h2>
                     </div>
                 </div>
             </section>

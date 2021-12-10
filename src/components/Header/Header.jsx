@@ -1,8 +1,12 @@
 import React from 'react'
 import logo from '../../assets/logo.svg'
 
-const Header = ({closeHeader}) => {
-   
+const Header = ({closeHeader,navBar,setNavBar}) => {
+    // const barRef = React.useRef(null)
+    const handleBar = () => {
+            // barRef.current.classList.add('active')
+            setNavBar(true)
+    }
     return (
         <div className={`header ${closeHeader}`}>
             <div className="header__logo">
@@ -18,7 +22,7 @@ const Header = ({closeHeader}) => {
                 </ul>
             </div>
             <span className="header__bar">
-                <button className="header__bar__button">
+                <button className={`header__bar__button ${navBar ? 'active' : ''}`} onClick={handleBar}>
                     <div className="header__bar__section"></div>
                     <div className="header__bar__section"></div>
                     <div className="header__bar__section"></div>

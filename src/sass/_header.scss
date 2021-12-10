@@ -16,9 +16,10 @@
     @include flex(center, space-around);
 
     &__logo {
-        @include flex(center, none);
-        height: 100%;
-        flex: 1;
+        top: 4px;
+        left: 16px;
+        position: fixed;
+        height: 75px;
     }
 
     &__logo img {
@@ -30,7 +31,7 @@
     }
     
     &__menu ul{
-        @include flex(center, space-around);
+        @include flex(center, center);
         @include mobile() {
             display:none;
         }
@@ -121,11 +122,14 @@
 
 .header.active {
     // display: none;
+    z-index: 0;
     @include mobile() {
         background-color: #fff;
         position: fixed;
+        box-shadow: 0 0 24px -6px rgba(17,17,17,0.5019607843137255);
+        z-index: 3;
     }
-    .header__menu ul {
+    .header__menu {
         display: none;
     }
 }

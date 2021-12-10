@@ -14,25 +14,25 @@ const educations = [
         img: cap2,
         name:'Trung học cơ sở A Hải Anh',
         address:'Xóm 3, Hải Hậu, Nam Định, Việt Nam',
-        description:'dsfasfsdfasfdasssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaaddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
-        title:'Trung học',
-        year:'2015-2016',
+        description:'Đang cập nhật',
+        title:'Trung học cơ sở',
+        year:'2012-2016',
         path:'https://www.facebook.com/thcshaianh'
     },    {
         img: cap3,
         name:'Trung học phổ thông A Hải Hậu',
         address:'672R+28V, TT. Yên Định, Hải Hậu, Nam Định, Việt Nam',
-        description:'dsfasfsdfasfdasssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-        title:'Trung học',
-        year:'2015-2016',
+        description:'Đang cập nhật',
+        title:'Trung học Phổ Thông',
+        year:'2017-2020',
         path:'https://www.facebook.com/truongthptahaihau/'
     },    {
         img: DH,
         name:'Học Viện Công Nghệ Bưu Chính Viễn Thông',
         address:'30 Trần Phú, P. Mộ Lao, Hà Đông, Hà Nội, Việt Nam',
-        description:'dsfasfsdfasfdasssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-        title:'Trung học',
-        year:'2015-2016',
+        description:'Đang cập nhật  ',
+        title:'Đại học',
+        year:'2021-2025',
         path:'https://www.facebook.com/HocvienPTIT'
     },
 ]

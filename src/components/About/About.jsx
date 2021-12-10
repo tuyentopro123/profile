@@ -35,7 +35,7 @@ const skills_2 = [
     },    
     {
         name:'Adobe Fireworks',
-        percents:'0%',
+        percents:'30%',
         color:'#ffb400'
     },
 ]
@@ -132,7 +132,7 @@ const About = () => {
                                 </li>
                                 <li>
                                     <label>Website:</label>
-                                    <span>Nguyễn Văn Tuyên</span>
+                                    <span>https://tuyentopro123.netlify.app/</span>
                                 </li>
                                 <li>
                                     <label>Email:</label>

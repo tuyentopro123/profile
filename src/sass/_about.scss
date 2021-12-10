@@ -1,0 +1,214 @@
+.about {
+    padding: $header-height 100px   ;
+    scroll-margin-top: 12px;
+    scroll-padding-top: 12px;
+    @include mobile() {
+        padding: $header-height 0 ;
+    }
+    &__header {
+        @include flex(center,center);
+        flex-direction: column;
+    }
+
+    &__description {
+        @include flex(center,space-around);
+        flex-wrap: wrap;
+        background-color: #81d5fa;
+        padding: 50px 30px;
+        align-items: flex-start;
+        border-radius:10px ;
+        z-index: 40;
+        flex-direction: row-reverse ;
+        transition: all 0.5s ease;
+        // @include tablet() {
+        //     flex-direction: column;
+        // }
+        &__img{
+            z-index: 100;
+        }
+        &__img img {
+            height: 290px;
+            @include tablet() {
+                height: 200px;
+            }
+            @include mobile() {
+                height: 200px;
+            }
+        }
+        &__text {
+            z-index: 100;
+            padding: 0 12px;
+            font-size: 14px;
+            width:40%;
+            color: #666;
+            @include mobile() {
+                width: 100%;
+            }
+            h1 {
+                margin: 12px 0;
+            }
+            @include tablet() {
+                margin-top: 30px;
+                text-align: justify;
+            }
+
+            @include mobile() {
+                margin-top: 30px;
+                text-align: justify;
+            }
+        }
+
+        &__button {
+            margin: 14px 0;
+            span{
+                background-color: #81d5fa;
+                color: #924dd3;
+                font-size: 20px;
+                border-bottom: 2px solid;
+                transition: all 0.3s;
+            }
+        }
+
+        &__button:hover {
+            span{
+                letter-spacing:2px;
+            }
+        }
+
+        &__skills {
+            z-index: 1;
+            margin-top: -440px;
+            width: 40%;
+            opacity: 0;
+            transition: all 0.5s ease;
+            @include mobile() {
+                width: 100%;
+            }
+            h4 {
+                font-size: 30px;
+                margin-bottom: 12px;
+            }
+            h3{
+                margin-bottom: 12px;
+                font-size: 18px;
+                border-bottom: 2px solid;
+            }
+
+            &__progess {
+                position: relative;
+                @include flex(center,space-between);
+                line-height: 30px;
+                width: 75%;
+                height:20px;
+                background-color: #fff;
+                border-radius: 3px;
+                margin: 12px 0;
+                span {
+                    margin-right: 10px;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            
+            &__progesser active {
+                width: 100%;
+                background-color: #ccc;
+            }
+
+            // &__progess:hover &__progess-active {
+            //     animation: growUp .5s linear;
+            // }
+            
+            &__progesser.active {
+                animation: growUp .75s linear;
+            }
+            &__progessbar {
+                position: absolute;
+                height: 101%;
+                p {
+                    // padding: 8px;
+                    color: #fff;
+                    font-size:12px;
+                    line-height: 21px;;
+                    margin-left: 12px;
+                }
+            }
+        }
+        &__skills.active {
+            opacity: 1;
+            z-index: 50;
+            margin-top: 40px;
+        }
+        
+        &__profile {
+            transition: all 0.5s ease;
+            margin-top: -440px;
+            width: 40%;
+            opacity: 0;
+            @include mobile() {
+                width: 100%;
+            }
+            h4 {
+                font-size: 30px;
+                margin-bottom: 12px;
+            }
+
+            ul {
+                & > * {
+                    margin-bottom: 6px;
+                    padding: 0 0 15px;
+                }
+
+                li {
+                    label {
+                        max-width: 100%;
+                        margin-bottom: 5px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &__profile.active {
+            z-index: 50;
+            opacity: 1;
+            margin-top: 40px;
+        }
+        
+    }
+}
+
+// .icon {
+//     text-align: center;
+//     width: 100%;
+//     opacity: 0;
+//     background-color: #81d5fa;
+//     span {
+//         font-size:25px;
+//     } 
+// }
+
+// .icon.active {
+//     opacity: 1;
+//     padding: 20px;
+// }
+
+@keyframes growUp {
+    0% {
+        width:0% ;
+    }
+    25% {
+        width:25% ;
+    }
+    50% {
+        width:50% ;
+    }
+    75% {
+        width: 75% ;
+    }
+    100% {
+        width: 100% ;
+    }
+}

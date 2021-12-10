@@ -1,0 +1,79 @@
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+a {
+    display: block;
+}
+
+.h1 {
+    margin: 26px 0;
+    font-weight: 700;
+    font-size:40px;
+    color: $dark_color;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    text-transform: uppercase;
+    position: relative;
+}
+
+
+
+// .home-porfolio {
+//     height: 100vh;
+//     overflow-x: hidden;
+
+//     @include mobile() {
+//         height: auto;
+//     }
+// }
+
+// .sections {
+//     width: 100vw;
+//     height: calc(100vh - 70px);
+//     position: relative;
+//     top: 70px;
+//     scroll-behavior: smooth;
+//     scroll-snap-type: y mandatory; 
+
+//     scrollbar-width: none;  //firefox
+//     &::-webkit-scrollbar {  // all
+//         display: none;
+//     }
+//     overflow-x: hidden;
+//     background-color: white;
+
+//     @include mobile() {
+//         scroll-snap-type: unset;
+//         height: auto; 
+//         top: 0px;
+//     }
+
+//     & > * {
+//         width: 100%;
+//         height: calc(100vh - 70px);
+//         scroll-snap-align: start;  // pause in head div
+
+//         @include mobile() {
+//             scroll-snap-align: unset;
+//             padding-top: 50px;
+//             height: 100vh;
+//         }
+//     }
+// }

@@ -1,0 +1,458 @@
+.education {
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    padding: $header_height;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    @include mobile() {
+        padding: $header_height 0;
+    }
+    &__icon {
+        background-color: #11e757;
+        top: 30%;
+        position: absolute;
+        border-radius: 50%;
+        display: flex;
+        img {
+            padding: 4px;
+            height: 60px;
+            @include tablet() {
+                height: 48px;
+            }
+        }
+
+        @include mobile() {
+            height: 48px;
+            left: 4%;
+        }
+    }
+    &__content {
+        display:flex;
+        position: relative;
+        // -webkit-flex-direction: row;
+        // flex-direction: row;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+        // -webkit-align-items: stretch;
+        // align-items: stretch; 
+        width: 100%;
+        // -webkit-flex-wrap: wrap;
+        // flex-wrap: wrap;
+        padding: 32px;
+        @include mobile() {
+            padding: 32px 0;
+            -webkit-align-items: center;
+            align-items: center; 
+            -webkit-flex-direction: column;
+            flex-direction: column;
+        }
+        @include tablet() {
+            -webkit-justify-content: space-evenly;
+            justify-content: space-evenly;
+        }
+    }
+    &__content.reverse {
+        flex-direction: row-reverse;
+        @include mobile() {
+            flex-direction: column!important;
+        }
+        @include tablet() {
+            flex-direction: row!important;
+        }
+    }
+    // &__content.reverse .education__body::before{
+    //     position: absolute;
+    //     top: 105px;
+    //     left: 95%;
+    //     width: 0px;
+    //     height: 0;
+    //     content: "";
+    //     border: 10px solid transparent;
+    //     border-left: 10px solid #fff;
+    //     @include tablet() {
+    //         left: 94%;
+    //     }
+    //     @include mobile() {
+    //         display: none;
+    //     }
+    // }
+    &__link {
+        text-decoration: none!important;
+        outline: none!important;
+        display: -webkit-flex;
+        display: flex;
+        // flex: 0.75;
+        -webkit-justify-content: stretch;
+        justify-content: stretch;
+        @include tablet() {
+            min-width: 565px;
+        }
+        @include mobile() {
+            display: none;
+        }
+        &__body {
+            width: 400px;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            background-color: #fff;
+            color:$dark_color;
+            margin: 10px 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 10%);
+            transition: all 0.2s ease;
+            img {
+                height: 320px;
+            }
+            @include mobile() {
+                width: 350px;
+            }
+
+            &:hover {
+                box-shadow: 0 4px 8px 0 rgba(17,17,17,0.5019607843137255);;
+                -webkit-transform: translateY(-1%);
+                transform: translateY(-1%);
+            }
+            
+        }
+
+        &__description {
+            padding: 15px;
+            h2 {
+                font-weight: 500;
+            }
+            p {
+                color: #878787;
+            }
+        }
+    }
+
+    &__body {
+        padding: 25px;
+        position: relative;
+        @include mobile() {
+            right: -10%;
+        }
+        // &::before {
+        //     position: absolute;
+        //     top: 105px;
+        //     right: 95%;
+        //     width: 0;
+        //     height: 0;
+        //     content: "";
+        //     border: 10px solid transparent;
+        //     border-right: 10px solid #fff;
+        //     @include tablet() {
+        //         left: 94%;
+        //     }
+        //     @include mobile() {
+        //         display: none;
+        //     }
+        // }
+        &__description {
+            box-shadow: 0 3px 0 #ddd;
+            background-color: #ffffff;
+            margin: 1em;
+            padding: 1em 2em;
+            
+            // Using inset box-shadow instead of border for sizing simplicity
+            box-shadow: inset 0 0 0 2px transparent;
+            color: $red;
+            font-size: inherit;
+            font-weight: 700;
+
+            // Required, since we're setting absolute on pseudo-elements
+            position: relative;
+            vertical-align: middle;
+
+            &::before,
+            &::after {
+                box-sizing: inherit;
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            @include flex(center,space-between);
+            width: 490px;
+            padding: 10px;
+            line-height: 155px;
+            margin: 8px 0;
+            transition: all 0.5s ease;
+            @include tablet() {
+                width: 380px;    
+            }
+            @include mobile() {
+                -webkit-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+                width: 310px;
+            }
+            p {
+                max-width: 350px;
+                word-wrap: break-word;
+                text-align: inherit;
+                line-height: 20px;
+                @include tablet() {
+                    max-width: 225px;
+                }
+            }
+
+            h3 {
+                min-width: 120px;
+                font-size:15px;
+                text-align: center;
+                padding: 10px;
+                border-right:2px solid #000;
+                transition: all 0.5s ease;
+                @include mobile() {
+                    line-height:15px;
+                    border-right:0 ;
+                    border-bottom:none;
+                    margin-top: 45px;
+                    color: #ccc;
+                    font-weight: 400;
+                }
+                
+            }
+
+            &__text {
+                padding-left: 12px;
+                max-height:130px;
+                transition: all 0.5s ease;
+                h4 {
+                    line-height: 25px;
+                    margin-bottom: 10px;
+                    transition: all 0.5s ease;
+                }
+                
+                p {
+                    color: #1f0303;
+                    max-height: 90px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    @include mobile() {
+                        overflow: visible;
+                        text-overflow: ellipsis;
+                        white-space: inherit;
+                    }
+                }
+            }
+        }
+
+        &__description:hover {
+            h3 {
+                transform: translate3d(-113px, 139px, 10px);
+                border-right:none;
+                opacity: 0;
+                @include mobile() {
+                    display:none;
+                }
+            }
+        }
+
+        &__description:hover &__description__text {
+            transform: translateX(-25%);
+            padding-left: 0;
+            @include mobile() {
+                transform: translateX(0);
+            }
+            h4 {
+                font-size:36px;
+                margin-bottom: 20px;
+                @include mobile() {
+                    text-align: center;
+                }
+            }
+            p {
+                text-overflow: inherit; 
+                white-space: inherit;
+            }
+        }
+    }
+}
+
+.education::before {
+    position: absolute;
+    left: 50%;
+    top: 17%;
+    width: 4px;
+    height: 80%;
+    content: "";
+    background: #ddd;
+    @include mobile() {
+        left: 10%;
+    }
+}
+
+.hovereffect {
+    width: 100%;
+    height: 92%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    @include tablet() {
+        width: 70%;
+        height: 75%;
+    }
+  }
+  
+  .hovereffect .overlay {
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    border-bottom: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    transform: scale(0,1);
+  }
+  
+  .hovereffect:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  .hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  
+  .hovereffect:hover img {
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+    filter: brightness(0.6);
+    -webkit-filter: brightness(0.6);
+  }
+  
+  .hovereffect h2 {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    background-color: transparent;
+    color: #FFF;
+    padding: 2em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
+  
+  .hovereffect a, .hovereffect p {
+    color: #FFF;
+    padding: 3em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+  }
+  
+  .hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  .draw {
+    transition: color 0.75s;
+
+  &::before,
+  &::after {
+    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  &:hover {
+    color: $cyan;
+  }
+
+  // Hover styles
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    border-top-color: $cyan; // Make borders visible
+    border-right-color: $cyan;
+    transition:
+      width 0.25s ease-out, // Width expands first
+      height 0.25s ease-out 0.25s; // And then height
+  }
+
+  &:hover::after {
+    border-bottom-color: $cyan; // Make borders visible
+    border-left-color: $cyan;
+    transition:
+      border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+      width 0.25s ease-out 0.5s, // And then exanding width
+      height 0.25s ease-out 0.75s; // And finally height
+  }
+}
+
+
+//   .meet {
+  
+//     &:hover {
+//       color: $yellow;
+//     }
+  
+//     // Start ::after in same position as ::before
+//     &::after {
+//       top: 0;
+//       left: 0;
+//     }
+  
+//     // Change colors
+//     &:hover::before {
+//       border-top-color: $yellow;
+//       border-right-color: $yellow;
+//     }
+  
+//     &:hover::after {
+//       border-bottom-color: $yellow;
+//       border-left-color: $yellow;
+//       transition: // Animate height first, then width
+//         height 0.25s ease-out,
+//         width 0.25s ease-out 0.25s;
+//     }
+  
+//   }

@@ -16,8 +16,8 @@ import space2 from './assets/space2.gif'
 
 
 function App() {
-  const [openHeader,setOpenHeader] = useState('')
-  const [closeHeader,setCloseHeader] = useState('active')
+  const [openHeader,setOpenHeader] = useState('active')
+  const [closeHeader,setCloseHeader] = useState('')
   const [navBar,setNavBar] = useState(false)
 
   window.addEventListener('scroll',() => {

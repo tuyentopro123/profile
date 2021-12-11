@@ -10,8 +10,8 @@ import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import Space from './components/Space/Space'
 import Aside from './components/Aside/Aside'
-import space from './assets/space.gif'
-import space2 from './assets/space2.gif'
+import space from './assets/space.jpg'
+import space2 from './assets/space2.jpg'
 
 
 
